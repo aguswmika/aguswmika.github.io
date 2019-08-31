@@ -1,0 +1,232 @@
+/* 
+    black #5d5d5d
+    black dark #313131
+    pink #ff62a5
+*/
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: #282828;
+    color: #dfdfdf;
+    font-size: 12pt;
+}
+
+section{
+    padding-left: 80px;
+    padding-right: 80px;
+    position: relative;
+}
+
+#header{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    height: 60px;
+}
+
+.logo{
+    color: #ff62a5;
+    font-weight: 700;
+    font-size: 20pt;
+    line-height: 40px;
+}
+
+.menu{
+    list-style-type: none;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a{
+    display: block;
+    padding: 0px 0px 0px 20px;
+    line-height: 40px;
+    font-size: 14pt;
+    font-weight: 500;
+}
+
+.menu-social{
+    list-style-type: none;
+}
+
+.menu-social li{
+    display: inline-block;
+}
+
+.menu-social li a{
+    display: block;
+    padding: 0px 0px 0px 10px;
+    line-height: 40px;
+    font-size: 13pt;
+    font-weight: 500;
+    color: #ffffff
+}
+
+#hero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: calc(100vh - 60px);
+    box-shadow: 0px -10px 0px 0px #5d5d5d inset;
+}
+
+
+.me-img{
+    padding: 2px;
+    background-color: #ff62a5;
+    border-radius: 50%;
+}
+.me-img img{
+    height: 350px;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 35pt;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 30pt;
+    margin-bottom: 15px;
+}
+
+h3{
+    font-size: 25pt;
+    margin-bottom: 15px;
+}
+
+h4{
+    font-size: 20pt;
+    margin-bottom: 15px;
+}
+
+
+.nopad{
+    padding: 0px;
+}
+
+small{
+    font-size: 12pt;
+}
+
+.pink{
+    color: #ff62a5;
+}
+
+.gray{
+    color: #5d5d5d;
+}
+
+.btn{
+    outline: 0;
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 0;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    color: #ff62a5;
+    font-weight: 500;
+    font-size: 10pt;
+    border: 2px solid #ff62a5;
+    box-shadow: 0vw 0px 0px 0px #ff62a5 inset;
+    transition: box-shadow 700ms ease-out, color 250ms ease-in;
+}
+
+.btn:hover{
+    box-shadow: 20vw 0px 0px 0px #ff62a5 inset;
+    color: #dfdfdf;
+    text-decoration: none;
+}
+
+.btn:active, .btn:focus{
+    box-shadow: 20vw 0px 0px 0px #ff62a5 inset;
+    color: #dfdfdf;
+    text-decoration: none;
+}
+
+.move-down{
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.move-down .btn{
+    display: inline-block;
+    position: relative;
+    bottom: inherit;
+}
+
+#tentang{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px -10px 0px 0px #5d5d5d inset;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.title{
+    margin-bottom: 70px; 
+}
+
+p{
+    line-height: 1.578278em;
+    font-size: 14pt;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kontak, #portofolio{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px -10px 0px 0px #5d5d5d inset;
+}
+
+@media(max-width: 900px){
+    #hero{
+        flex-direction: column;
+        height: auto;
+        padding-top: 80px;
+        padding-bottom:150px;
+    }
+}

@@ -1,187 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
-	<title>I Putu Agus Wahyu Widiatmika - Mahasiswa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I Putu Agus Wahyu Widiatmika - aguswmika.github.io</title>
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<style>
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	body{
-		font-family: 'Raleway', sans-serif;
-		background-color: #282828;
-		color: #ffffff;
-	}	
-
-	.container{
-		display: table;
-		height: 100vh;
-		width: 100%;
-	}
-
-	.container-cell{
-		display: table-cell;
-		height: 100vh;
-		vertical-align: middle;
-	}
-
-	.container-text{
-		margin: 0 auto;
-		width: 950px;
-	}
-
-	.hello{
-		font-size:2.86em;
-	}
-
-	.hello::after{
-	    content: " ";
-	    display: block;
-	    width: 100%;
-	    height: 6px;
-	    background-color: #2196F3;
-	    margin: 10px 0;
-	}
-
-	.name{
-		text-align: right;
-		width: 100%;
-		display: block;
-	}
-
-	.button-container{
-		margin: 80px auto 0 auto;
-		text-align: center;
-		position: relative;
-	}
-
-	.button{
-	    text-decoration: none;
-	    color: #fff;
-	    width: 185px;
-	    height: 50px;
-	    display: inline-block;
-	    border: 1px solid #ffffff;
-	    line-height: 50px;
-	}
-
-	@media (max-width: 950px){
-		.container-text{
-			width: 750px;
-		}
-	}
-
-	@media (max-width: 750px){
-		.container-text{
-			width: 100%;
-			padding: 0 40px;
-		}
-	}
-
-	#soon{
-		display: none;
-	}
-
-	#spinner{
-		display: none;
-	}
-
-	/*spinner*/
-	.spinner-container{
-		position: absolute;
-		left: 0;
-		right: 0;
-		top:5px;
-	}
-
-	.spinner {
-	  width: 40px;
-	  height: 40px;
-	  margin: 0 auto;
-	  background-color: #fff;
-
-	  border-radius: 100%;  
-	  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-	  animation: sk-scaleout 1.0s infinite ease-in-out;
-	}
-
-	@-webkit-keyframes sk-scaleout {
-	  0% { -webkit-transform: scale(0) }
-	  100% {
-	    -webkit-transform: scale(1.0);
-	    opacity: 0;
-	  }
-	}
-
-	@keyframes sk-scaleout {
-	  0% { 
-	    -webkit-transform: scale(0);
-	    transform: scale(0);
-	  } 100% {
-	    -webkit-transform: scale(1.0);
-	    transform: scale(1.0);
-	    opacity: 0;
-	  }
-	}
-
-</style>
-
 <body>
-	<div class="container">
-		<div class="container-cell">
-			<div class="container-text">
-				<h1 class="hello">Halo! Selamat datang</h1>
-				<h3 class="name">I Putu Agus Wahyu Widiatmika</h3>
+    <section id="header">
+        <ul class="menu">
+            <li><a href="#tentang">tentang</a></li>
+            <li><a href="#">portofolio</a></li>
+            <li><a href="#">kontak</a></li>
+        </ul>
 
-				<div class="button-container">
-					<a id="button" class="button" href="#coming-soon">
-						<span id="text">Lihat proyek saya</span>
-						<span id="soon">Segera datang</span>
-						<div id="spinner" class="spinner-container">
-							<div class="spinner"></div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+        <ul class="menu-social">
+            <li><a href="https://fb.me/aguswmika">fb</a></li>
+            <li><a href="https://instagram.com/aguswmika">ig</a></li>
+            <li><a href="https://github.com/aguswmika">github</a></li>
+        </ul>
+    </section>
 
-	<script>
-		window.addEventListener('DOMContentLoaded', function(){
+    <section id="hero">
+        <div class="hello">
+            <h1 class="nopad">
+                Halo! Saya <span class="pink">Agus</span> <br>
+                Saya seorang <span class="pink">web developer</span> <br>
+                <small><span class="gray">(kadang mobile developer)</span></small>
+            </h1>
+        </div>
+        <div class="me-img">
+            <img src="img/me.jpg" alt="I Putu Agus Wahyu Widiatmika picture">
+        </div>
+        <div class="move-down">
+            <a href="#tentang" class="btn">lihat lebih lanjut</a>
+        </div>
+    </section>
 
-			var text = document.querySelector('#text'),
-				soon = document.querySelector('#soon'),
-				loader = document.querySelector('#spinner'),
-				button = document.querySelector('#button'), 
-				buttonState = false;
+    </section>
 
-			button.addEventListener('click', function(){
-				if(buttonState == false){
-					text.parentNode.removeChild(text);
-					loader.style.display = 'block';
-					setTimeout(function(){
-						loader.style.display = 'none';
-						button.style.backgroundColor = '#ffffff';
-						button.style.color = '#282828';
-						soon.style.display = 'block';
-					},2000);
+    <section id="tentang">
+        <div>
+            <h1 class="title text-center pink">Tentang</h1>
+            <p class="text-center" style="margin-bottom: 50px;">
+                Perkenalkan kembali, nama saya I Putu Agus Wahyu Widiatmika. Saya merupakan seorang pria yang berumur 20 tahun. <br>
+                Saya memiliki kemampuan dalam membangun suatu perangkat lunak baik dalam <i>platform website</i> maupun
+                <i>mobile</i>. <br>
+                Saya merupakan seorang yang bekerja keras, dapat bekerja dalam tim, dan mampu bekerja dibawah tekanan. <br>
+                Saat ini, status saya masih berkuliah di Universitas Udayana. Meskipun masih berkuliah, <br>saya memiliki beberapa
+                portofolio dari perangkat lunak yang telah saya selesaikan.
+            </p>
+            <h4 class="pink">Teknologi yang sering saya gunakan</h4>
+            <p><span class="pink">Front-End</span> : html, css, js[native, jquery, reactjs, react-native]</p>
+            <p><span class="pink">Back-End</span> : php[native, laravel, codeigniter], sql, python(low), java(low)</p>
+        </div>
+    </section>
 
-					buttonState = true;
-				}
-			});
-		});
+    <section id="portofolio">
+        <div>
+            <h1 class="title text-center pink">Portofolio</h1>
+            <p class="text-center" style="margin-bottom: 50px;">
+                Coming soon. Mohon maaf ya (-/\-)
+            </p>
+        </div>
+    </section>
 
-
-		
-
-
-	</script>
-
+    <section id="kontak">
+        <div>
+            <h1 class="title text-center pink">Kontak</h1>
+            <p class="text-center" style="margin-bottom: 50px;">
+                <span class="pink">email</span> : <a href="mailto:aguswmika@gmail.com">aguswmika@gmail.com</a> <br>
+                <span class="pink">telp</span> : <a href="telp:+6285333574027">+6285333574027</a>
+            </p>
+        </div>
+    </section>
 </body>
 </html>
